@@ -3,7 +3,7 @@
 
 [quote]
 ____
-Subatomic dbunit!
+Subatomic DBUnit!
 ____
 
 image:https://travis-ci.org/rmpestano/quarkus-dbunit-sample.svg[Build Status (Travis CI), link=https://travis-ci.org/rmpestano/quarkus-dbunit-sample]
