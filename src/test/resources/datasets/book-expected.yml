@@ -1,0 +1,7 @@
+BOOK:
+  - ID: 1
+    AUTHOR: "Joshua Bloch"
+    GENRE: "Tech"
+    ISBN: "regex:^[0-9]{4}-[0-9]{3}-TEST$" #ex: 1234-291-TEST
+    TITLE: "Effective Java (2nd Edition)"
+    YEAR: 2001

@@ -1,0 +1,16 @@
+== Quarkus DBUnit sample
+
+A sample project, based on https://antoniogoncalves.org/2019/06/07/configuring-a-quarkus-application/[this blog^], showing how to use DBUnit (through https://github.com/database-rider/database-rider[dbrider^]) in Quarkus tests.
+
+
+=== Running
+
+Just run `mvn clean test`
+
+=== Usage
+
+Just annotate your Quarkus test class with `@DBUnitInterceptor`, provide a dataset, and declare it on your test with `@DataSet`, more https://github.com/database-rider/database-rider#cdi-module[details see rider cdi module^].
+
+=== Example
+
+See QuarkusDBUnitTest example.
