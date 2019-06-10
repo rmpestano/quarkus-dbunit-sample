@@ -102,9 +102,11 @@ public class QuarkusDBUnitTest {
         final Book book = new Book("Joshua Bloch", "Effective Java (2nd Edition)", 2001, "Tech", "978-0-3213-5668-0");
 
         Book bookeCreated = repository.create(book);
-        assertThat(bookeCreated).isNotNull()
-                .extracting("id", "isbn")//isbn is changed with prefix only on rest api
-                .contains(1L, "978-0-3213-5668-0");
+        assertThat(bookeCreated.getId())
+                .isNotNull();
+        assertThat(bookeCreated)
+                .extracting("isbn","title")//isbn is changed with prefix only on rest api
+                .contains("978-0-3213-5668-0","Effective Java (2nd Edition)");
     }
 
     @Test
