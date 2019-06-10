@@ -30,11 +30,13 @@ import org.junit.jupiter.api.Test;
 import javax.inject.Inject;
 import javax.json.Json;
 import javax.json.JsonObject;
+import javax.transaction.Transactional;
 import javax.ws.rs.core.MediaType;
 import java.io.StringReader;
 import java.util.List;
 
 import static io.restassured.RestAssured.given;
+import static javax.transaction.Transactional.TxType.REQUIRED;
 import static javax.ws.rs.core.Response.Status.CREATED;
 import static javax.ws.rs.core.Response.Status.OK;
 import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
@@ -43,7 +45,7 @@ import static org.hamcrest.collection.IsCollectionWithSize.hasSize;
 
 @QuarkusTest
 @DBUnitInterceptor
-public class QuarkusDBUnitTest {
+public class QuarkusDBUnit10Test {
 
     @Inject
     BookRepository repository;
@@ -95,6 +97,7 @@ public class QuarkusDBUnitTest {
 
     @Test
     @DataSet("book-empty.yml")
+    @Transactional(REQUIRED)
     public void shouldCreateBook() {
         final Book book = new Book("Joshua Bloch", "Effective Java (2nd Edition)", 2001, "Tech", "978-0-3213-5668-0");
 
