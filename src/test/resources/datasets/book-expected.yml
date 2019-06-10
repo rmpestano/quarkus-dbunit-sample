@@ -1,5 +1,5 @@
 BOOK:
-  - ID: 1
+  - ID: "regex:\\d" #any number
     AUTHOR: "Joshua Bloch"
     GENRE: "Tech"
     ISBN: "regex:^[0-9]{4}-[0-9]{3}-TEST$" #ex: 1234-291-TEST

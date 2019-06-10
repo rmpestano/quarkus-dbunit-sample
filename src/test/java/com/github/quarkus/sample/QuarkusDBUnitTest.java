@@ -109,7 +109,7 @@ public class QuarkusDBUnitTest {
 
     @Test
     @DataSet("book-empty.yml")
-    @ExpectedDataSet(value = "book-expected.yml", ignoreCols = "id")
+    @ExpectedDataSet("book-expected.yml")
     public void shouldCreateBookViaRestApi() {
         final Book book = new Book("Joshua Bloch", "Effective Java (2nd Edition)", 2001, "Tech", " 978-0-3213-5668-0");
 
